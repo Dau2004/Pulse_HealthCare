@@ -173,7 +173,7 @@
         <div class="title">Login Form</div>
         <div class="form-container">
             <div class="form-inner">
-                <form action="#" class="login">
+                <form id="login-form" action="#">
                     <div class="field">
                         <input type="text" placeholder="Email Address" required>
                     </div>
@@ -204,17 +204,18 @@
                 document.getElementById('loader').style.display = 'none';
                 document.getElementById('pulse-text').style.display = 'none';
                 document.querySelector('.wrapper').style.display = 'block';
-            }, 4000); // 4000 milliseconds = 4 seconds
+            }, 3000); // 4000 milliseconds = 4 seconds
         });
-    
-        document.querySelector('.login form').addEventListener('submit', function(event) {
+
+        document.getElementById('login-form').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent the default form submission
-    
-            // Perform login actions here, such as AJAX request
-    
-            // Redirect or take action after successful login
+
+            // Simulate login process
+            setTimeout(function() {
+                // Redirect to index.html upon successful login
+                window.location.href = 'index.html';
+            }, 1000); // Simulate a delay for login processing
         });
     </script>
-    
 </body>
 </html>

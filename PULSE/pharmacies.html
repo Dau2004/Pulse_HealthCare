@@ -42,6 +42,14 @@
     transform-style: preserve-3d;
     perspective: 1000px;
 }
+#searchInput{
+  color: #fff;
+  height: 30px;
+  margin: 8px 0;
+  display: inline-block;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
 
 /* Card Front and Back */
 .front, .back {
@@ -137,12 +145,13 @@
     .box {
         position: relative;
         margin : 10px auto;
-        width: 500px;
-        height: 40px;
+        width: 600px;
+        height: 70px;
         display: flex;
         cursor: pointer;
         padding: 10px 20px;
-        background: #607e8b;
+        background: #2d4d5f83;
+        
         border-radius: 30px;
         align-items: center;
         box-shadow: 0 10px 25px rgba(0. 0, 0, 0, 3);
@@ -150,7 +159,7 @@
 
     }
     .box:hover input {
-        width: 500px;
+        width: 600px;
 
     } 
 
@@ -167,7 +176,7 @@
         color: #fff;
     }
     .box a .fas {
-        color: #2c5364;
+        color: #fff;
         font-size: 25px;
     }
     .black {
@@ -184,32 +193,22 @@
         }
 
         .wrapper {
-            width: 90%;
+            width: 100%;
             margin: 0 auto;
-            max-width: 80rem;
+            max-width: 120rem;
+            
         }
 
-        .search-bar {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .search-bar input {
-            padding: 0.5rem;
-            font-size: 1rem;
-            width: 50%;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
 
         .cols {
             display: flex;
-            flex-wrap: wrap;
+            flex-wrap: wrap !important;
             justify-content: center;
+
         }
 
         .col {
-            width: calc(25% - 2rem);
+          flex: 1 1 30%;
             margin: 1rem;
             cursor: pointer;
         }
@@ -324,6 +323,18 @@
                 margin: 0 0 2rem 0;
             }
         }
+        .colour {
+            color: #fff;
+            text-transform: capitalize;
+        }
+        .location {
+            color: #fff;
+            text-transform: capitalize;
+            font-size: 30px;
+            font-weight: 300;
+            font-family: 'Montserrat';
+            margin-top: 1rem;
+        }
 </style>
 <body class="pharmacies-page">
 
@@ -357,7 +368,7 @@
     <!-- Page Title -->
     <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/page-title-bg.webp);">
       <div class="container position-relative">
-        <h1>pharmacies</h1>
+        <h1 class="colour">pharmacies</h1>
         <p>
           Home
           /
@@ -373,9 +384,9 @@
     </div><!-- End Page Title -->
 
     <!-- Search Bar Section -->
-    <div class="container search-bar" style="margin-top: 30px;">
+    <div class="container search-bar" style="margin-top: 30px; margin-bottom: 30px; display: flex;  align-items: center; height: 90px;">
       <div class="box">
-        <input type="text" id="searchInput" placeholder="Search for products..." oninput="filterProducts()">
+        <input type="text" id="searchInput" placeholder="Search for pharmacies..." oninput="filterProducts()">
         <a><i class="fas fa-search"></i></a>
       </div>
     </div><!-- End Search Bar Section -->
@@ -390,7 +401,7 @@
                   <div class="front" style="background-image: url('bimophar pharmacie.png')">
                       <div class="inner">
                           <p>BIMOPHAR PHARMACIE</p>
-                          <span>Lorem ipsum</span>
+                          <span class="location">Location Rusizi</span>
                       </div>
                   </div>
                   <div class="back">
@@ -405,7 +416,7 @@
                   <div class="front" style="background-image: url('pharmacy kipharma.png')">
                       <div class="inner">
                           <p>PHARMACY KIPHARMA</p>
-                          <span>Lorem ipsum</span>
+                          <span>LOCATED NEAR NYARUGENGE MARKET</span>
                       </div>
                   </div>
                   <div class="back">
@@ -429,6 +440,111 @@
                       </div>
                   </div>
               </div>
+          </div>
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+                <div class="front" style="background-image: url('PHARAMACIE FIDELE.png')">
+                    <div class="inner">
+                        <p>PHARAMACIE FIDELE</p>
+                        <span>Lorem ipsum</span>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+                <div class="front" style="background-image: url('PHARAMACIE FIDELE.png')">
+                    <div class="inner">
+                        <p>PHARAMACIE FIDELE</p>
+                        <span>Lorem ipsum</span>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+                <div class="front" style="background-image: url('PHARAMACIE FIDELE.png')">
+                    <div class="inner">
+                        <p>PHARAMACIE FIDELE</p>
+                        <span>Lorem ipsum</span>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+                <div class="front" style="background-image: url('PHARAMACIE FIDELE.png')">
+                    <div class="inner">
+                        <p>PHARAMACIE FIDELE</p>
+                        <span>Lorem ipsum</span>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+                <div class="front" style="background-image: url('PHARAMACIE FIDELE.png')">
+                    <div class="inner">
+                        <p>PHARAMACIE FIDELE</p>
+                        <span>Lorem ipsum</span>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+                <div class="front" style="background-image: url('PHARAMACIE FIDELE.png')">
+                    <div class="inner">
+                        <p>PHARAMACIE FIDELE</p>
+                        <span>Lorem ipsum</span>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+                <div class="front" style="background-image: url('PHARAMACIE FIDELE.png')">
+                    <div class="inner">
+                        <p>PHARAMACIE FIDELE</p>
+                        <span>Lorem ipsum</span>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+                    </div>
+                </div>
+            </div>
           </div>
           <div class="col" ontouchstart="this.classList.toggle('hover');">
               <div class="container">
@@ -508,50 +624,6 @@
       </div>
   </div>
     <!-- Customer Feedback Section -->
-    <section class="customer-feedback">
-      <div class="container">
-        <div class="section-title" data-aos="fade-up">
-          <h2>Customer Feedback</h2>
-        </div>
-
-        <div class="feedback-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="feedback-item">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id.</p>
-                <div class="customer-info">
-                  <img src="assets/img/customers/customer-1.jpg" alt="Customer">
-                  <h3>John Doe</h3>
-                </div>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="feedback-item">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id.</p>
-                <div class="customer-info">
-                  <img src="assets/img/customers/customer-2.jpg" alt="Customer">
-                  <h3>Jane Smith</h3>
-                </div>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="feedback-item">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id.</p>
-                <div class="customer-info">
-                  <img src="assets/img/customers/customer-3.jpg" alt="Customer">
-                  <h3>Michael Brown</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Add Pagination -->
-          <div class="swiper-pagination"></div>
-        </div>
-      </div>
-    </section><!-- End Customer Feedback Section -->
 
   </main><!-- End #main -->
 
@@ -563,11 +635,11 @@
         <div class="row gy-4">
           <div class="col-lg-4 col-md-6 footer-about">
             <a href="index.html" class="logo d-flex align-items-center">
-              <span class="sitename">AgriCulture</span>
+              <span class="sitename">PULSE</span>
             </a>
             <div class="footer-contact pt-3">
-              <p>A108 Adam Street</p>
-              <p>New York, NY 535022</p>
+              <p><a href="https://www.google.com/maps/place/African+Leadership+University/@-1.9306311,30.1503427,920m/data=!3m2!1e3!4b1!4m6!3m5!1s0x19dca77688d3131f:0x3a65f6d29a33c0d3!8m2!3d-1.9306311!4d30.1529176!16s%2Fg%2F11fptq4j9w?entry=ttu" target="_blank"><i class="bi bi-geo-alt"></i> KN 159 ST</p>
+              <p>KIGALI RWANDA, NY 535022</p>
               <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
               <p><strong>Email:</strong> <span>info@example.com</span></p>
             </div>
@@ -576,11 +648,11 @@
           <div class="col-lg-2 col-md-3 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Terms of service</a></li>
-              <li><a href="#">Privacy policy</a></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="login.html">LOGIN / REGISTER</a></li>
             </ul>
           </div>
 
@@ -626,14 +698,14 @@
 
         <div class="d-flex flex-column align-items-center align-items-lg-start">
           <div>
-            © Copyright <strong><span>MyWebsite</span></strong>. All Rights Reserved
+            © Copyright <strong><span>PULSE</span></strong>. All Rights Reserved
           </div>
           <div class="credits">
             <!-- All the links in the footer should remain intact. -->
             <!-- You can delete the links only if you purchased the pro version. -->
             <!-- Licensing information: https://bootstrapmade.com/license/ -->
             <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/herobiz-bootstrap-business-template/ -->
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            <a href="index.html">PULSE</a>
           </div>
         </div>
 

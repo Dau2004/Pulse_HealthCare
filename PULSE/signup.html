@@ -197,15 +197,15 @@
                 document.querySelector('.wrapper').style.display = 'block';
             }, 3000); // 4000 milliseconds = 4 seconds
         });
-    
-        document.querySelector('.login form').addEventListener('submit', function(event) {
+
+        document.querySelector('.signup').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent the default form submission
     
-            // Perform login actions here, such as AJAX request
+            // Perform signup actions here, such as AJAX request
     
-            // Redirect or take action after successful login
+            // Redirect or take action after successful signup
+            window.location.href = 'index.html'; // Redirect to index.html upon successful signup
         });
     </script>
-    
 </body>
 </html>
