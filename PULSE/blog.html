@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Blog - AgriCulture Bootstrap Template</title>
+  <title>Blog - Pulse Bootstrap Template</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -28,13 +28,62 @@
   <link href="assets/css/main.css" rel="stylesheet">
 
   <!-- =======================================================
-  * Template Name: AgriCulture
-  * Template URL: https://bootstrapmade.com/agriculture-bootstrap-website-template/
+  * Template Name: Pulse
+  * Template URL: https://bootstrapmade.com/Pulse-bootstrap-website-template/
   * Updated: Jun 29 2024 with Bootstrap v5.3.3
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 </head>
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+  .loader-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: -webkit-linear-gradient(left, #003366, #004080, #0059b3, #0073e6);
+    z-index: 1000; /* Ensure loader is on top */
+  }
+
+.loader {
+    width: 85px;
+    height: 35px;
+    --g1: conic-gradient(from 90deg at 3px 3px, #0000 90deg, #fff 0);
+    --g2: conic-gradient(from -90deg at 22px 22px, #0000 90deg, #fff 0);
+    background: var(--g1), var(--g1), var(--g1), var(--g2), var(--g2), var(--g2);
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
+    animation: l6 1s infinite alternate;
+}
+
+@keyframes l6 {
+    0% { background-position: 0 50%, 50% 50%, 100% 50% }
+    20% { background-position: 0 0, 50% 50%, 100% 50% }
+    40% { background-position: 0 100%, 50% 0, 100% 50% }
+    60% { background-position: 0 50%, 50% 100%, 100% 0 }
+    80% { background-position: 0 50%, 50% 50%, 100% 100% }
+    100% { background-position: 0 50%, 50% 50%, 100% 50% }
+}
+
+.pulse-text {
+    font-size: 50px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    position: absolute;
+    top: 40%; /* Adjust to position slightly above center */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001; /* Ensure text is on top */
+}
+
+</style>
 
 <body class="blog-page">
 
@@ -43,8 +92,8 @@
 
       <a href="index.html" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="assets/img/logo.png" alt="AgriCulture">
-        <!-- <h1 class="sitename">AgriCulture</h1>  -->
+        <img src="assets/img/logo.png" alt="Pulse">
+        <!-- <h1 class="sitename">Pulse</h1>  -->
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -54,23 +103,6 @@
           <li><a href="services.html">Our Services</a></li>
           <li><a href="testimonials.html">Testimonials</a></li>
           <li><a href="blog.html" class="active">Blog</a></li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -80,6 +112,11 @@
   </header>
 
   <main class="main">
+
+    <div class="loader-background">
+      <div class="loader" id="loader"></div>
+      <div class="pulse-text" id="pulse-text">PULSE</div>
+    </div>
 
     <!-- Page Title -->
     <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/page-title-bg.webp);">
@@ -329,7 +366,7 @@
         <div class="row gy-4">
           <div class="col-lg-4 col-md-6 footer-about">
             <a href="index.html" class="logo d-flex align-items-center">
-              <span class="sitename">AgriCulture</span>
+              <span class="sitename">Pulse</span>
             </a>
             <div class="footer-contact pt-3">
               <p>A108 Adam Street</p>
@@ -399,7 +436,7 @@
             <!-- You can delete the links only if you purchased the pro version. -->
             <!-- Licensing information: https://bootstrapmade.com/license/ -->
             <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/herobiz-bootstrap-business-template/ -->
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            Designed by <a href="about.html">Pulse</a>
           </div>
         </div>
 
@@ -430,6 +467,18 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>window.addEventListener('load', function() {
+    // Show the loader and pulse text initially
+    document.getElementById('loader').style.display = 'block';
+    document.getElementById('pulse-text').style.display = 'block';
+    
+    // Set a timeout to hide the loader and pulse text after 3 seconds
+    setTimeout(function() {
+        document.querySelector('.loader-background').style.display = 'none';
+    }, 1000); // 3000 milliseconds = 3 seconds
+});
+
+</script>
 
 </body>
 
